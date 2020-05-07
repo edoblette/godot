@@ -1370,6 +1370,8 @@ public:
 		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "custom_template/debug", PROPERTY_HINT_GLOBAL_FILE, "*.apk"), ""));
 		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "custom_template/release", PROPERTY_HINT_GLOBAL_FILE, "*.apk"), ""));
 		r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "custom_template/use_custom_build"), false));
+		//Line to get the default zip file : find_export_template("android_source.zip")
+		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "custom_template/custom_android_build_template", PROPERTY_HINT_GLOBAL_FILE, "*.zip"), ""));
 		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "custom_template/plugins", PROPERTY_HINT_PLACEHOLDER_TEXT, "Plugin1,Plugin2,..."), ""));
 		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "command_line/extra_args"), ""));
 		r_options->push_back(ExportOption(PropertyInfo(Variant::INT, "version/code", PROPERTY_HINT_RANGE, "1,4096,1,or_greater"), 1));
